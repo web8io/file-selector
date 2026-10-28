@@ -12,9 +12,6 @@
 		"file-selector.css",
 		"README.md"
 	],
-	"peerDependencies": {
-		"react": ">=18"
-	},
 	"keywords": [
 		"react",
 		"file-selector",

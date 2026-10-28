@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 
-const FileSelector = ({open, files, loading, onUpload, allowedMimeTypes, selectType, onFilter, onSearch, onDelete, onClose, onSelect,}) => {
+const FileSelector = ({open, files, loading, onUpload, allowedMimeTypes = [], selectType, onFilter, onSearch, onDelete, onClose, onSelect,}) => {
 	const [search, setSearch] = useState("");
 	const [type, setType] = useState("all");
 	const [selected, setSelected] = useState(null);
@@ -197,7 +197,7 @@ const FileSelector = ({open, files, loading, onUpload, allowedMimeTypes, selectT
 						<path d="M8 13h8M8 17h5" />
 					</svg>
 
-					<span className="!mt-2 text-[11px] text-zinc-400">
+					<span className="mt-2 text-[11px] text-zinc-400">
 						PDF
 					</span>
 				</div>
@@ -249,11 +249,11 @@ const FileSelector = ({open, files, loading, onUpload, allowedMimeTypes, selectT
 				{/* Header */}
 				<div className="flex items-center justify-between px-5 py-4 border-b border-zinc-800">
 					<div>
-						<h2 className="!text-sm !font-medium !text-white">
+						<h2 className="text-sm font-medium text-white">
 							Select a file
 						</h2>
 
-						<p className="!mt-1 text-xs text-zinc-500">
+						<p className="mt-1 text-xs text-zinc-500">
 							Choose an existing file or upload a new one
 						</p>
 					</div>
@@ -352,7 +352,7 @@ const FileSelector = ({open, files, loading, onUpload, allowedMimeTypes, selectT
 
 				{ /* Uplaod error */}
 				{error && (
-					<div className="mx-5 !mt-3 flex items-center justify-between gap-3 rounded-md border border-red-900/50 bg-red-950/30 px-3 py-2 text-xs text-red-400">
+					<div className="mx-5 mt-3 flex items-center justify-between gap-3 rounded-md border border-red-900/50 bg-red-950/30 px-3 py-2 text-xs text-red-400">
 						<span className="whitespace-pre-wrap">{error}</span>
 
 						<button
@@ -379,7 +379,7 @@ const FileSelector = ({open, files, loading, onUpload, allowedMimeTypes, selectT
 
 				{/* upload progress */}
 				{uploading && (
-					<div className="mx-5 !mt-3 rounded-md border border-zinc-800 bg-zinc-900/50 px-3 py-3">
+					<div className="mx-5 mt-3 rounded-md border border-zinc-800 bg-zinc-900/50 px-3 py-3">
 						<div className="flex items-center justify-between gap-3">
 							<span className="truncate text-xs text-zinc-300">
 								Uploading {uploadFilename}
@@ -390,7 +390,7 @@ const FileSelector = ({open, files, loading, onUpload, allowedMimeTypes, selectT
 							</span>
 						</div>
 
-						<div className="!mt-2 h-1 overflow-hidden rounded-full bg-zinc-800">
+						<div className="mt-2 h-1 overflow-hidden rounded-full bg-zinc-800">
 							<div
 								className="h-full rounded-full bg-white transition-all duration-150"
 								style={{
@@ -426,7 +426,7 @@ const FileSelector = ({open, files, loading, onUpload, allowedMimeTypes, selectT
 								/>
 							</svg>
 
-							<p className="!mt-3 text-sm text-zinc-500">
+							<p className="mt-3 text-sm text-zinc-500">
 								Loading files...
 							</p>
 						</div>
@@ -451,11 +451,11 @@ const FileSelector = ({open, files, loading, onUpload, allowedMimeTypes, selectT
 									</svg>
 								</div>
 
-								<p className="!mt-3 text-sm text-zinc-400">
+								<p className="mt-3 text-sm text-zinc-400">
 									No files found
 								</p>
 
-								<p className="!mt-1 text-xs text-zinc-600">
+								<p className="mt-1 text-xs text-zinc-600">
 									Upload a file or try another search
 								</p>
 							</div>

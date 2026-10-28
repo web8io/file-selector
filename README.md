@@ -99,6 +99,10 @@ import "@web8io/file-selector/file-selector.css";
 - React 18 or later
 - A build setup that supports JSX in dependencies
 
+## About
+
+Developed by [Web8](https://web8.io).
+
 ## License
 
 MIT
