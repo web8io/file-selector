@@ -101,7 +101,7 @@ import "@web8io/file-selector/file-selector.css";
 
 ## About
 
-Developed by [Web8](https://web8.io).
+Developed by [Web8](https://www.web8.io).
 
 ## License
 
