@@ -1,0 +1,26 @@
+{
+	"name": "@web8io/file-selector",
+	"version": "1.0.0",
+	"description": "A reusable React file selector component.",
+	"main": "./FileSelector.jsx",
+	"exports": {
+		".": "./FileSelector.jsx",
+		"./file-selector.css": "./file-selector.css"
+	},
+	"files": [
+		"FileSelector.jsx",
+		"file-selector.css",
+		"README.md"
+	],
+	"peerDependencies": {
+		"react": ">=18"
+	},
+	"keywords": [
+		"react",
+		"file-selector",
+		"file-manager",
+		"media-library",
+		"web8"
+	],
+	"license": "MIT"
+}
